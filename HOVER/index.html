@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> 
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background: #111;
+            min-height:100vh ;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+        ul{
+            position: relative;
+            display: flex;
+            /* list-style: none; */
+            /* text-decoration: none; */
+
+        }
+        ul li{
+            position: relative;
+            list-style: none;
+            margin: 0 20px;
+            cursor: pointer;
+
+        }
+        ul li a{
+            text-decoration: none;
+        }
+        ul li a .fa{
+            font-size: 6em;
+            color:#333
+        }
+        ul li::before{
+            font-family: fontAwesome;
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 6em;
+            height: 0;
+            overflow: hidden;
+            transition: 0.5s ease-in-out;
+        }
+        ul li:nth-child(1)::before{
+            content:'\f099' ;
+            color:#00acee;
+            border-bottom:4px solid #00acee;
+        }ul li:nth-child(2)::before{
+            content:'\f16a' ;
+            color:#FF0000;
+            border-bottom:4px solid #FF0000;
+        }ul li:nth-child(3)::before{
+            content:'\f232' ;
+            color:#4FCE5D;
+            border-bottom:4px solid #4FCE5D;
+        }ul li:nth-child(4)::before{
+            content:'\f16d' ;
+            color:#dd2a7b;
+            border-bottom:4px solid #dd2a7b;
+            }
+        ul li:hover::before{
+            height: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="^"><i class="fa fa-twitter" aria-hidden="true"></i>
+        </a></li>
+        <li><a href="^"><i class="fa fa-youtube-play" aria-hidden="true"></i>
+        </i></a></li>
+        <li><a href="^"><i class="fa fa-whatsapp" aria-hidden="true"></i>
+        </i></a></li>
+        <li><a href="^"><i class="fa fa-instagram" aria-hidden="true"></i>
+        </i></a></li>
+    </ul>
+</body>
+</html>
